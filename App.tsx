@@ -4,9 +4,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // screens
 import HomeScreen from './screens/HomeScreen';
+import LoginScreen from './screens/LoginScreen';
+import RegisterScreen from './screens/RegisterScreen';
 
 const RootStack = createNativeStackNavigator({
+  // initialRouteName: 'Home',
   screens: {
+    Login: LoginScreen,
+    Register: RegisterScreen,
     Home: HomeScreen,
   },
 });
