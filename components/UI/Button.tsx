@@ -4,11 +4,16 @@ import React from 'react';
 // extras
 import { GlobalStyles } from '../../styles';
 
-export default function Button() {
+type ButtonProps = {
+  text: string;
+  onPress: () => void;
+};
+
+export default function Button({ text, onPress }: ButtonProps) {
   return (
-    <Pressable>
+    <Pressable onPress={onPress}>
       <View style={styles.button}>
-        <Text style={styles.buttonText}>Click Me</Text>
+        <Text style={styles.buttonText}>{text}</Text>
       </View>
     </Pressable>
   );
