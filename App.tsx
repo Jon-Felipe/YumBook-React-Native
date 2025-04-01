@@ -10,7 +10,12 @@ import RegisterScreen from './screens/RegisterScreen';
 const RootStack = createNativeStackNavigator({
   // initialRouteName: 'Home',
   screens: {
-    Login: LoginScreen,
+    Login: {
+      screen: LoginScreen,
+      options: {
+        headerShown: false,
+      },
+    },
     Register: RegisterScreen,
     Home: HomeScreen,
   },
