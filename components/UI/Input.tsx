@@ -18,7 +18,7 @@ export default function Input({
   rightIcon,
 }: InputProps) {
   return (
-    <>
+    <View>
       <Text style={styles.label}>{labelText}</Text>
       <View style={styles.inputContainer}>
         <TextInput
@@ -29,15 +29,14 @@ export default function Input({
         />
         {rightIcon && rightIcon}
       </View>
-    </>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   label: {
-    fontSize: 16,
-    marginBottom: 5,
     color: GlobalStyles.colors.gray700,
+    marginBottom: 5,
   },
   inputContainer: {
     flexDirection: 'row',
