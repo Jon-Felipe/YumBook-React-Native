@@ -17,7 +17,7 @@ type InputProps = {
   secureTextEntry?: boolean;
   rightIcon?: React.ReactNode;
   value: string;
-  onChange: (e: NativeSyntheticEvent<TextInputChangeEventData>) => void;
+  onChangeText: (text: string) => void;
 };
 
 export default function Input({
@@ -26,7 +26,7 @@ export default function Input({
   secureTextEntry = false,
   rightIcon,
   value,
-  onChange,
+  onChangeText,
 }: InputProps) {
   return (
     <View>
@@ -38,7 +38,7 @@ export default function Input({
           placeholderTextColor={GlobalStyles.colors.gray500}
           secureTextEntry={secureTextEntry}
           value={value}
-          onChange={onChange}
+          onChangeText={onChangeText}
         />
         {rightIcon && rightIcon}
       </View>
