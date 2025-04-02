@@ -12,8 +12,19 @@ import Button from '../components/UI/Button';
 import { GlobalStyles } from '../constants/styles';
 import { AuthText } from '../constants/text';
 
+type AuthDetails = {
+  name: string;
+  email: string;
+  password: string;
+};
+
 export default function AuthScreen() {
   const [isSignUp, setIsSignUp] = useState<boolean>(false);
+  const [authDetails, setAuthDetails] = useState<AuthDetails>({
+    name: '',
+    email: '',
+    password: '',
+  });
 
   return (
     <View style={styles.container}>
@@ -28,14 +39,26 @@ export default function AuthScreen() {
         {/* inputs */}
         <View style={styles.inputsContainer}>
           {isSignUp && (
-            <Input labelText='Name' placeholderText='Ex. John Doe' />
+            <Input
+              labelText='Name'
+              placeholderText='Ex. John Doe'
+              value={authDetails?.name}
+              onChange={() => {}}
+            />
           )}
-          <Input labelText='Email' placeholderText='example@gmail.com' />
+          <Input
+            labelText='Email'
+            placeholderText='example@gmail.com'
+            value={authDetails?.email}
+            onChange={() => {}}
+          />
           <Input
             labelText='Password'
             placeholderText='••••••••••••••••'
             secureTextEntry={true}
             rightIcon={<Ionicons name='eye-off-outline' size={24} />}
+            value={authDetails?.password}
+            onChange={() => {}}
           />
         </View>
         {isSignUp ? (
