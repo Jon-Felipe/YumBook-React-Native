@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  NativeSyntheticEvent,
+  TextInputChangeEventData,
+} from 'react-native';
 import React from 'react';
 
 // extras
@@ -9,6 +16,8 @@ type InputProps = {
   placeholderText?: string;
   secureTextEntry?: boolean;
   rightIcon?: React.ReactNode;
+  value: string;
+  onChange: (e: NativeSyntheticEvent<TextInputChangeEventData>) => void;
 };
 
 export default function Input({
@@ -16,6 +25,8 @@ export default function Input({
   placeholderText,
   secureTextEntry = false,
   rightIcon,
+  value,
+  onChange,
 }: InputProps) {
   return (
     <View>
@@ -26,6 +37,8 @@ export default function Input({
           placeholder={placeholderText}
           placeholderTextColor={GlobalStyles.colors.gray500}
           secureTextEntry={secureTextEntry}
+          value={value}
+          onChange={onChange}
         />
         {rightIcon && rightIcon}
       </View>
