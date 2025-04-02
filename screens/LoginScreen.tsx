@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
+import Checkbox from 'expo-checkbox';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
@@ -11,14 +12,25 @@ import Button from '../components/UI/Button';
 import { GlobalStyles } from '../styles';
 
 export default function LoginScreen() {
+  const [isSignUp, setIsSignUp] = useState<boolean>(false);
+
   return (
     <View style={styles.container}>
       {/* heaeder */}
-      <Text style={styles.title}>Sign In</Text>
-      <Text style={styles.subText}>Hi! Welcome back, you've been missed</Text>
+      <Text style={styles.title}>
+        {isSignUp ? 'Create Account' : 'Sign In'}
+      </Text>
+      <Text style={styles.subText}>
+        {isSignUp
+          ? 'Fill your information below or register with your social account.'
+          : "Hi! Welcome back, you've been missed"}
+      </Text>
       <View style={styles.formContainer}>
         {/* inputs */}
         <View style={styles.inputsContainer}>
+          {isSignUp && (
+            <Input labelText='Name' placeholderText='Ex. John Doe' />
+          )}
           <Input labelText='Email' placeholderText='example@gmail.com' />
           <Input
             labelText='Password'
@@ -27,12 +39,25 @@ export default function LoginScreen() {
             rightIcon={<Ionicons name='eye-off-outline' size={24} />}
           />
         </View>
-        <Text style={styles.forgotPasswordLink}>Forgot Password?</Text>
+        {isSignUp ? (
+          <View style={styles.termsAndConditions}>
+            <Checkbox color={GlobalStyles.colors.primary500} />
+            <Text>
+              Agree with <Text style={styles.linkText}>Terms & Condition</Text>
+            </Text>
+          </View>
+        ) : (
+          <Text style={[styles.linkText, styles.forgotPasswordLink]}>
+            Forgot Password?
+          </Text>
+        )}
         <Button text='Sign In' onPress={() => {}} />
         {/* divider */}
         <View style={styles.altSignInTextContainer}>
           <View style={styles.divider} />
-          <Text style={styles.altSignInText}>Or sign in with</Text>
+          <Text style={styles.altSignInText}>{`Or sign ${
+            isSignUp ? 'up' : 'in'
+          } with`}</Text>
           <View style={styles.divider} />
         </View>
         {/* socials sign in */}
@@ -49,8 +74,10 @@ export default function LoginScreen() {
         </View>
         {/* login or sign up text */}
         <Text style={styles.signUpInText}>
-          Don't have an account?{' '}
-          <Text style={styles.signUpInLink}>Sign Up</Text>
+          {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
+          <Text style={styles.linkText} onPress={() => setIsSignUp(!isSignUp)}>
+            {`Sign ${isSignUp ? 'In' : 'Up'}`}
+          </Text>
         </Text>
       </View>
     </View>
@@ -66,28 +93,36 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
-    fontWeight: 'semibold',
-    letterSpacing: 1,
+    fontWeight: '500',
     color: GlobalStyles.colors.gray700,
   },
   subText: {
     marginTop: 14,
     fontSize: 14,
+    textAlign: 'center',
+    maxWidth: 250,
     color: GlobalStyles.colors.gray500,
   },
   formContainer: {
-    marginTop: 60,
+    marginTop: 40,
     width: '90%',
   },
   inputsContainer: {
     rowGap: 20,
-    marginBottom: 15,
+    marginBottom: 20,
   },
-  forgotPasswordLink: {
+  termsAndConditions: {
+    flexDirection: 'row',
+    columnGap: 10,
+    marginBottom: 20,
+  },
+  linkText: {
     color: GlobalStyles.colors.primary400,
     textDecorationLine: 'underline',
-    textAlign: 'right',
     fontWeight: '500',
+  },
+  forgotPasswordLink: {
+    textAlign: 'right',
     marginBottom: 20,
   },
   altSignInTextContainer: {
@@ -95,7 +130,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     columnGap: 10,
-    marginVertical: 40,
+    marginVertical: 30,
   },
   divider: {
     borderColor: GlobalStyles.colors.gray50,
@@ -121,14 +156,9 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 40,
+    marginBottom: 30,
   },
   signUpInText: {
     textAlign: 'center',
-  },
-  signUpInLink: {
-    color: GlobalStyles.colors.primary500,
-    textDecorationLine: 'underline',
-    fontWeight: '600',
   },
 });
