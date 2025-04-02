@@ -26,6 +26,10 @@ export default function AuthScreen() {
     password: '',
   });
 
+  function onChangeHandler(name: keyof AuthDetails, value: string): void {
+    setAuthDetails((prevState) => ({ ...prevState, [name]: value }));
+  }
+
   return (
     <View style={styles.container}>
       {/* heaeder */}
@@ -43,14 +47,14 @@ export default function AuthScreen() {
               labelText='Name'
               placeholderText='Ex. John Doe'
               value={authDetails?.name}
-              onChange={() => {}}
+              onChangeText={(text) => onChangeHandler('name', text)}
             />
           )}
           <Input
             labelText='Email'
             placeholderText='example@gmail.com'
             value={authDetails?.email}
-            onChange={() => {}}
+            onChangeText={(text) => onChangeHandler('email', text)}
           />
           <Input
             labelText='Password'
@@ -58,7 +62,7 @@ export default function AuthScreen() {
             secureTextEntry={true}
             rightIcon={<Ionicons name='eye-off-outline' size={24} />}
             value={authDetails?.password}
-            onChange={() => {}}
+            onChangeText={(text) => onChangeHandler('password', text)}
           />
         </View>
         {isSignUp ? (
