@@ -11,7 +11,7 @@ import Button from '../components/UI/Button';
 // extras
 import { GlobalStyles } from '../styles';
 
-export default function LoginScreen() {
+export default function AuthScreen() {
   const [isSignUp, setIsSignUp] = useState<boolean>(false);
 
   return (

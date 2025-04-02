@@ -4,13 +4,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // screens
 import HomeScreen from './screens/HomeScreen';
-import LoginScreen from './screens/LoginScreen';
+import AuthScreen from './screens/AuthScreen';
 
 const RootStack = createNativeStackNavigator({
   // initialRouteName: 'Home',
   screens: {
-    Login: {
-      screen: LoginScreen,
+    Auth: {
+      screen: AuthScreen,
       options: {
         headerShown: false,
       },
