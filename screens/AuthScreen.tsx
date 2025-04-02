@@ -10,6 +10,7 @@ import Button from '../components/UI/Button';
 
 // extras
 import { GlobalStyles } from '../constants/styles';
+import { AuthText } from '../constants/text';
 
 export default function AuthScreen() {
   const [isSignUp, setIsSignUp] = useState<boolean>(false);
@@ -18,12 +19,10 @@ export default function AuthScreen() {
     <View style={styles.container}>
       {/* heaeder */}
       <Text style={styles.title}>
-        {isSignUp ? 'Create Account' : 'Sign In'}
+        {isSignUp ? AuthText.signUpTitle : AuthText.signInTitle}
       </Text>
       <Text style={styles.subText}>
-        {isSignUp
-          ? 'Fill your information below or register with your social account.'
-          : "Hi! Welcome back, you've been missed"}
+        {isSignUp ? AuthText.signUpSubText : AuthText.signInSubText}
       </Text>
       <View style={styles.formContainer}>
         {/* inputs */}
@@ -74,7 +73,7 @@ export default function AuthScreen() {
         </View>
         {/* login or sign up text */}
         <Text style={styles.signUpInText}>
-          {isSignUp ? 'Already have an account?' : "Don't have an account?"}{' '}
+          {isSignUp ? AuthText.signUpRedirectText : AuthText.signInRedirectText}{' '}
           <Text style={styles.linkText} onPress={() => setIsSignUp(!isSignUp)}>
             {`Sign ${isSignUp ? 'In' : 'Up'}`}
           </Text>
