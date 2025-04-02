@@ -2,7 +2,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 
 // extras
-import { GlobalStyles } from '../../styles';
+import { GlobalStyles } from '../../constants/styles';
 
 type ButtonProps = {
   text: string;

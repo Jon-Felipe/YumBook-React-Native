@@ -9,7 +9,7 @@ import Input from '../components/UI/Input';
 import Button from '../components/UI/Button';
 
 // extras
-import { GlobalStyles } from '../styles';
+import { GlobalStyles } from '../constants/styles';
 
 export default function AuthScreen() {
   const [isSignUp, setIsSignUp] = useState<boolean>(false);
