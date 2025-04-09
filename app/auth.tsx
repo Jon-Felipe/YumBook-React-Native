@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native';
 import React, { useState } from 'react';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import { useRouter } from 'expo-router';
 
 // components
 import Input from '@/components/ui/Input';
@@ -8,6 +9,8 @@ import Button from '@/components/ui/Button';
 import SocialIcon from '@/components/ui/SocialIcon';
 
 export default function AuthScreen() {
+  const router = useRouter();
+
   const [isSignUp, setIsSignUp] = useState<boolean>(false);
 
   return (
@@ -49,7 +52,12 @@ export default function AuthScreen() {
         </Text>
       </View>
       <View className='w-full mt-6'>
-        <Button text={`Sign ${isSignUp ? 'Up' : 'In'}`} />
+        <Button
+          text={`Sign ${isSignUp ? 'Up' : 'In'}`}
+          onPress={() => {
+            router.navigate('/(logged-in)/(tabs)');
+          }}
+        />
       </View>
       <View className='mt-10 w-full'>
         <Text className='text-center'>{`Or sign ${
