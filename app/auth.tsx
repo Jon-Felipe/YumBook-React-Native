@@ -1,5 +1,6 @@
 import { View, Text } from 'react-native';
 import React from 'react';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 // components
 import Input from '@/components/ui/Input';
@@ -23,6 +24,7 @@ export default function AuthScreen() {
           placeholder='************'
           value=''
           onChange={(text) => console.log(text)}
+          iconRight={<FontAwesome5 name='eye-slash' size={18} />}
         />
       </View>
     </View>
