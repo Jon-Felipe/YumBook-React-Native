@@ -1,9 +1,10 @@
-import { View, Text, Button } from 'react-native';
+import { View, Text } from 'react-native';
 import React from 'react';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 // components
 import Input from '@/components/ui/Input';
+import Button from '@/components/ui/Button';
 
 export default function AuthScreen() {
   return (
@@ -31,6 +32,9 @@ export default function AuthScreen() {
         <Text className='font-semibold text-right underline text-orange-500'>
           Forgot Password?
         </Text>
+      </View>
+      <View className='w-full mt-8'>
+        <Button text='Sign In' />
       </View>
     </View>
   );
