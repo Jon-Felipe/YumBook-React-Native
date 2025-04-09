@@ -5,6 +5,7 @@ import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 // components
 import Input from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
+import SocialIcon from '@/components/ui/SocialIcon';
 
 export default function AuthScreen() {
   return (
@@ -35,6 +36,14 @@ export default function AuthScreen() {
       </View>
       <View className='w-full mt-8'>
         <Button text='Sign In' />
+      </View>
+      <View className='mt-14 w-full'>
+        <Text className='text-center'>Or sign in with</Text>
+      </View>
+      <View className='flex flex-row items-center justify-evenly w-full mt-14'>
+        <SocialIcon icon='apple' />
+        <SocialIcon icon='google' />
+        <SocialIcon icon='facebook-f' />
       </View>
     </View>
   );
