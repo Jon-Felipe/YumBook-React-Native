@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import React from 'react';
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
@@ -26,6 +26,11 @@ export default function AuthScreen() {
           onChange={(text) => console.log(text)}
           iconRight={<FontAwesome5 name='eye-slash' size={18} />}
         />
+      </View>
+      <View className='w-full mt-4'>
+        <Text className='font-semibold text-right underline text-orange-500'>
+          Forgot Password?
+        </Text>
       </View>
     </View>
   );
