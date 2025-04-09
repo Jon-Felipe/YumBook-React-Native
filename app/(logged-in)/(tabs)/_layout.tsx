@@ -7,7 +7,7 @@ type tabBarIcon = {
   size?: number;
 };
 
-export default function RootLayout() {
+export default function TabsLayout() {
   return (
     <Tabs>
       <Tabs.Screen
