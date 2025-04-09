@@ -45,6 +45,12 @@ export default function AuthScreen() {
         <SocialIcon icon='google' />
         <SocialIcon icon='facebook-f' />
       </View>
+      <View className='mt-14'>
+        <Text>
+          Don't have an account?{' '}
+          <Text className='text-orange-500 font-medium underline'>Sign Up</Text>
+        </Text>
+      </View>
     </View>
   );
 }
