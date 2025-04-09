@@ -1,4 +1,4 @@
-import { View, Text, TextInput, StyleSheet } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 import React from 'react';
 
 type InputProps = {
@@ -18,32 +18,15 @@ export default function Input({
 }: InputProps) {
   return (
     <View>
-      <Text style={styles.label}>{label}</Text>
-      <View style={styles.inputContainer}>
+      <Text className='mb-2'>{label}</Text>
+      <View className='bg-neutral-100 flex flex-row items-center justify-between px-4 rounded-lg'>
         <TextInput
           placeholder={placeholder}
           value={value}
           onChangeText={onChange}
         />
-        {iconRight && (
-          <View style={styles.iconRightContainer}>{iconRight}</View>
-        )}
+        {iconRight && <View>{iconRight}</View>}
       </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  label: {
-    marginBottom: 4,
-  },
-  inputContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    backgroundColor: '#eee',
-    borderRadius: 8,
-    paddingHorizontal: 8,
-  },
-  iconRightContainer: {},
-});
