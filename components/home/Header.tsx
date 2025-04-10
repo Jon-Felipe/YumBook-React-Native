@@ -12,8 +12,8 @@ export default function Header() {
         />
         <Text className='text-xl font-medium'>Hello, Jon 👋</Text>
       </View>
-      <View className='border border-neutral-200 rounded-full p-2'>
-        <FontAwesome name='bell-o' size={24} />
+      <View className='border border-neutral-200 rounded-full p-3'>
+        <FontAwesome name='bell-o' size={20} />
       </View>
     </View>
   );
