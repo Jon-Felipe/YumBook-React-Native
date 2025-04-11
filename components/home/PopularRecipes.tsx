@@ -30,7 +30,7 @@ export default function PopularRecipes() {
                 <Text className='text-lg text-white font-semibold'>
                   {item.title}
                 </Text>
-                <Text className='text-white text-sm'>By Annie</Text>
+                <Text className='text-white text-sm'>By {item.author}</Text>
               </View>
             </View>
           )}

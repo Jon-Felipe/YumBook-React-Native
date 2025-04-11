@@ -7,4 +7,5 @@ export type Recipe = {
   imageUrl?: string;
   cookTimeMinutes?: number;
   servings?: number;
+  author: string;
 };
