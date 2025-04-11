@@ -30,11 +30,19 @@ export default function PopularRecipes() {
                 <FontAwesome name='heart-o' size={24} />
               </View>
               <Image source={{ uri: item.imageUrl }} style={styles.image} />
-              <View className='left-5 right-0 bottom-14'>
-                <Text className='text-lg text-white font-semibold'>
-                  {item.title}
-                </Text>
-                <Text className='text-white text-xs'>By {item.author}</Text>
+              <View className='absolute left-0 right-0 bottom-5 flex flex-row items-center justify-between px-4'>
+                <View>
+                  <Text className='text-xl text-white font-semibold'>
+                    {item.title}
+                  </Text>
+                  <Text className='text-white text-xs'>By {item.author}</Text>
+                </View>
+                <View className='flex flex-row items-center gap-x-2'>
+                  <FontAwesome name='star' size={14} color='orange' />
+                  <Text className='text-white font-semibold'>
+                    {item.averageRating}
+                  </Text>
+                </View>
               </View>
             </View>
           )}
