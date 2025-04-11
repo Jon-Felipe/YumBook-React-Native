@@ -7,5 +7,6 @@ export type Recipe = {
   imageUrl?: string;
   cookTimeMinutes?: number;
   servings?: number;
+  averageRating?: number;
   author: string;
 };
