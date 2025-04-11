@@ -7,6 +7,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import React from 'react';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 // extras
 import { dummy_recipes } from '@/data/dummy_recipes';
@@ -25,12 +26,15 @@ export default function PopularRecipes() {
           data={dummy_recipes}
           renderItem={({ item }) => (
             <View style={styles.carouselContainer}>
+              <View className='w-12 h-12 rounded-full bg-white/80 flex items-center justify-center absolute right-2 top-3 z-10'>
+                <FontAwesome name='heart-o' size={24} />
+              </View>
               <Image source={{ uri: item.imageUrl }} style={styles.image} />
-              <View className='left-5 right-0 bottom-16'>
+              <View className='left-5 right-0 bottom-14'>
                 <Text className='text-lg text-white font-semibold'>
                   {item.title}
                 </Text>
-                <Text className='text-white text-sm'>By {item.author}</Text>
+                <Text className='text-white text-xs'>By {item.author}</Text>
               </View>
             </View>
           )}
@@ -49,6 +53,7 @@ export default function PopularRecipes() {
 const styles = StyleSheet.create({
   carouselContainer: {
     width: ITEM_WIDTH,
+    position: 'relative',
   },
   image: {
     width: '100%',
