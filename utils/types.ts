@@ -10,3 +10,10 @@ export type Recipe = {
   averageRating?: number;
   author: string;
 };
+
+export type Category = {
+  id: string;
+  name: string;
+  description?: string;
+  imageUrl?: string;
+};
