@@ -14,7 +14,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
     <View className='relative mb-4 rounded-3xl overflow-hidden'>
       <View className='absolute top-0 left-0 right-0 p-4 z-10'>
         <View className='flex flex-row items-center justify-between'>
-          <View className='bg-white p-2 rounded-full flex flex-row items-center gap-x-2'>
+          <View className='bg-white py-2 px-3 rounded-full flex flex-row items-center gap-x-2'>
             <FontAwesome name='star' color='#f97316' />
             <Text className='text-sm font-semibold'>
               {recipe.averageRating} (1k+ Reviews)
