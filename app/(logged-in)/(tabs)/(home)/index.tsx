@@ -1,5 +1,5 @@
-// import { Link } from 'expo-router';
-import { FlatList, ScrollView, Text, View } from 'react-native';
+import { Link } from 'expo-router';
+import { FlatList, Pressable, ScrollView, Text, View } from 'react-native';
 
 // components
 import Header from '@/components/home/Header';
@@ -26,7 +26,11 @@ export default function HomeScreen() {
       <View className='mt-8'>
         <View className='flex flex-row items-center justify-between mb-2'>
           <Text className='text-lg font-semibold'>Categories</Text>
-          <Text className='text-neutral-400'>See All</Text>
+          <Link href='./category' asChild>
+            <Pressable>
+              <Text className='text-neutral-400'>See All</Text>
+            </Pressable>
+          </Link>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {dummy_categories.map((category) => (
