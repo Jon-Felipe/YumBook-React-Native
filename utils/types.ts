@@ -6,6 +6,7 @@ export type Recipe = {
   steps: string[];
   imageUrl?: string;
   cookTimeMinutes?: number;
+  difficulty?: string;
   servings?: number;
   averageRating?: number;
   author: string;

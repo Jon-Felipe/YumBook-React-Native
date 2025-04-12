@@ -25,6 +25,7 @@ export const dummy_recipes: Recipe[] = [
     imageUrl:
       'https://images.unsplash.com/photo-1622973536968-3ead9e780960?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     cookTimeMinutes: 30,
+    difficulty: 'Easy',
     servings: 2,
     averageRating: 4.2,
     author: 'Jane',
@@ -51,6 +52,7 @@ export const dummy_recipes: Recipe[] = [
     imageUrl:
       'https://images.unsplash.com/photo-1627564803215-ad55bad5c5ea?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     cookTimeMinutes: 25,
+    difficulty: 'Easy',
     servings: 2,
     averageRating: 3,
     author: 'Annie',
@@ -78,6 +80,7 @@ export const dummy_recipes: Recipe[] = [
     imageUrl:
       'https://images.unsplash.com/photo-1599021419847-d8a7a6aba5b4?q=80&w=1958&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     cookTimeMinutes: 10,
+    difficulty: 'Medium',
     servings: 2,
     averageRating: 5,
     author: 'Jack',
@@ -103,6 +106,7 @@ export const dummy_recipes: Recipe[] = [
     imageUrl:
       'https://plus.unsplash.com/premium_photo-1667807521536-bc35c8d8b64b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     cookTimeMinutes: 15,
+    difficulty: 'Easy',
     servings: 1,
     averageRating: 1.4,
     author: 'Mary',
@@ -133,6 +137,7 @@ export const dummy_recipes: Recipe[] = [
     imageUrl:
       'https://images.unsplash.com/photo-1625876981820-be17a6807189?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     cookTimeMinutes: 25,
+    difficulty: 'Difficult',
     servings: 12,
     averageRating: 3.4,
     author: 'Susan',
