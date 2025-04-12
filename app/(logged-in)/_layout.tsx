@@ -10,7 +10,13 @@ export default function AuthLayout() {
   return (
     <Stack>
       <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
-      <Stack.Screen name='recipes/index' />
+      <Stack.Screen
+        name='recipes/index'
+        options={({ route }: { route: any }) => ({
+          title: route.params?.title || 'Recipe',
+          headerTitleAlign: 'center',
+        })}
+      />
       <Stack.Screen
         name='category'
         options={{

@@ -6,7 +6,7 @@ import { useLocalSearchParams } from 'expo-router';
 import { dummy_recipes } from '@/data/dummy_recipes';
 
 export default function RecipesScreen() {
-  const { categoryId } = useLocalSearchParams();
+  const { title, categoryId } = useLocalSearchParams();
 
   const recipes = dummy_recipes.filter((recipe) =>
     recipe.categoryId.includes(categoryId.toString())

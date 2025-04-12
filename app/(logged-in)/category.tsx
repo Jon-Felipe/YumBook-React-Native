@@ -17,7 +17,7 @@ export default function CategoryScreen() {
             onPress={() =>
               navigate({
                 pathname: './recipes',
-                params: { categoryId: category.id },
+                params: { title: category.name, categoryId: category.id },
               })
             }
           >
