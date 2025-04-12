@@ -35,7 +35,7 @@ export default function HomeScreen() {
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {dummy_categories.map((category) => (
             <View key={category.id} className='mr-2'>
-              <Pill text={category.name} icon={category.imageUrl} />
+              <Pill text={category.name} icon={category.icon} />
             </View>
           ))}
         </ScrollView>
