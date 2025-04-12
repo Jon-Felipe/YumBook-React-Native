@@ -29,6 +29,7 @@ export const dummy_recipes: Recipe[] = [
     servings: 2,
     averageRating: 4.2,
     author: 'Jane Smith',
+    categoryId: ['6'],
   },
   {
     id: '2',
@@ -56,6 +57,7 @@ export const dummy_recipes: Recipe[] = [
     servings: 2,
     averageRating: 3,
     author: 'Annie Johnson',
+    categoryId: ['2', '3'],
   },
   {
     id: '3',
@@ -84,6 +86,7 @@ export const dummy_recipes: Recipe[] = [
     servings: 2,
     averageRating: 5,
     author: 'Jack Williams',
+    categoryId: ['2', '3'],
   },
   {
     id: '4',
@@ -110,6 +113,7 @@ export const dummy_recipes: Recipe[] = [
     servings: 1,
     averageRating: 1.4,
     author: 'Mary Jones',
+    categoryId: ['1', '2', '3'],
   },
   {
     id: '5',
@@ -141,5 +145,6 @@ export const dummy_recipes: Recipe[] = [
     servings: 12,
     averageRating: 3.4,
     author: 'Susan Davis',
+    categoryId: ['8', '12'],
   },
 ];

@@ -10,6 +10,7 @@ export type Recipe = {
   servings?: number;
   averageRating?: number;
   author: string;
+  categoryId: string[];
 };
 
 export type Category = {
