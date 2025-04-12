@@ -10,6 +10,16 @@ export default function AuthLayout() {
   return (
     <Stack>
       <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
+      <Stack.Screen
+        name='category'
+        options={{
+          title: 'Categories',
+          headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          elevation: 0,
+          showdowColor: 'transparent',
+        }}
+      />
     </Stack>
   );
 }

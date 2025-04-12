@@ -26,7 +26,7 @@ export default function HomeScreen() {
       <View className='mt-8'>
         <View className='flex flex-row items-center justify-between mb-2'>
           <Text className='text-lg font-semibold'>Categories</Text>
-          <Link href='./category' asChild>
+          <Link href='../category' asChild>
             <Pressable>
               <Text className='text-neutral-400'>See All</Text>
             </Pressable>
