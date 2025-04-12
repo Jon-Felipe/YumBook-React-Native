@@ -28,7 +28,7 @@ export const dummy_recipes: Recipe[] = [
     difficulty: 'Easy',
     servings: 2,
     averageRating: 4.2,
-    author: 'Jane',
+    author: 'Jane Smith',
   },
   {
     id: '2',
@@ -55,7 +55,7 @@ export const dummy_recipes: Recipe[] = [
     difficulty: 'Easy',
     servings: 2,
     averageRating: 3,
-    author: 'Annie',
+    author: 'Annie Johnson',
   },
   {
     id: '3',
@@ -83,7 +83,7 @@ export const dummy_recipes: Recipe[] = [
     difficulty: 'Medium',
     servings: 2,
     averageRating: 5,
-    author: 'Jack',
+    author: 'Jack Williams',
   },
   {
     id: '4',
@@ -109,7 +109,7 @@ export const dummy_recipes: Recipe[] = [
     difficulty: 'Easy',
     servings: 1,
     averageRating: 1.4,
-    author: 'Mary',
+    author: 'Mary Jones',
   },
   {
     id: '5',
@@ -140,6 +140,6 @@ export const dummy_recipes: Recipe[] = [
     difficulty: 'Difficult',
     servings: 12,
     averageRating: 3.4,
-    author: 'Susan',
+    author: 'Susan Davis',
   },
 ];
