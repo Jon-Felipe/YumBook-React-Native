@@ -12,7 +12,7 @@ export default function RecipesScreen() {
     recipe.categoryId.includes(categoryId.toString())
   );
 
-  if (recipes.length <= 0) {
+  if (recipes.length === 0) {
     return (
       <View className='flex flex-1 items-center justify-center bg-white'>
         <Text className='text-xl font-semibold'>
