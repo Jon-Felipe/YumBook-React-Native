@@ -1,9 +1,12 @@
-import { View, Text } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 import React from 'react';
 import { useLocalSearchParams } from 'expo-router';
 
+// components
+
 // extras
 import { dummy_recipes } from '@/data/dummy_recipes';
+import RecipeCard from '@/components/shared/RecipeCard';
 
 export default function RecipesScreen() {
   const { title, categoryId } = useLocalSearchParams();
@@ -23,10 +26,13 @@ export default function RecipesScreen() {
   }
 
   return (
-    <View>
-      {recipes.map((recipe) => (
-        <Text key={recipe.id}>{recipe.title}</Text>
-      ))}
+    <View className='flex flex-1 bg-white p-5'>
+      <FlatList
+        data={recipes}
+        renderItem={({ item }) => <RecipeCard recipe={item} />}
+        keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={false}
+      />
     </View>
   );
 }
