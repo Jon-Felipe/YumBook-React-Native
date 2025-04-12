@@ -15,6 +15,9 @@ export default function AuthLayout() {
         options={({ route }: { route: any }) => ({
           title: route.params?.title || 'Recipe',
           headerTitleAlign: 'center',
+          headerShadowVisible: false,
+          elevation: 0,
+          showdowColor: 'transparent',
         })}
       />
       <Stack.Screen
